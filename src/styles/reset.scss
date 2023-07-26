@@ -1,8 +1,9 @@
 html {
-  background-color: var(--white);
   box-sizing: border-box;
   font-size: 1rem;
+  font-family: var(--font-primary);
   color: var(--black);
+  background-color: var(--white);
 }
 
 *,
@@ -56,4 +57,9 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
 }
