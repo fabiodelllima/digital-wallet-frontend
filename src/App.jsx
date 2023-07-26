@@ -1,9 +1,11 @@
-function App() {  
+// import { HomePage } from './pages/HomePage';
+
+const App = () => {
   return (
     <>
-      {/*  */}
-    </>
-  )
-}
+      {/* <HomePage /> */}
+    </>    
+  );
+};
 
-export default App
+export default App;
