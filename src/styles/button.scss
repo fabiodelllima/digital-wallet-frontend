@@ -1,0 +1,16 @@
+.button {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: var(--white);
+  height: 48px;
+  cursor: pointer;
+
+  &.full {
+    width: 100%;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
