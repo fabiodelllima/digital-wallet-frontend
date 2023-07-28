@@ -1,53 +1,47 @@
-import { useState } from 'react';
 import styles from './style.module.scss';
+import { useState } from 'react';
+import { Input } from './Input';
 
-export const Form = () => {
+export const Form = ({ addCard }) => {
   const [description, setDescription] = useState('');
   const [value, setValue] = useState(0);
 
   const submit = (event) => {
     event.preventDefault();
-    console.log({ description, value });
+    // console.log({ description, value });
+    addCard({ description, value });
     setDescription('');
-    setValue('');
+    setValue(0);
   };
 
-  console.log(description);
-  console.log(value);
-
   return (
-    <form 
-      onSubmit={submit}
-      className={styles.container}
-    >
-      <label htmlFor='description'>Descrição</label>
-      <input 
-        className={styles.input} 
-        type="text" 
-        name='description'
+    <form onSubmit={submit} className={styles.container}>
+      <Input
+        label='Descrição' 
+        placeholder='Descrição'
+        type='text'
         id='description'
         value={description}
-        placeholder='Descrição'
-        onChange={(event) => setDescription(event.target.value)}
+        setValue={setDescription}
+        className={styles.input}
       />
-
-      <label htmlFor='value'>Valor (R$)</label>
-      <input 
-        className={styles.input} 
-        type="text" 
-        name='value'
+      <Input
+        label='Valor (R$)' 
+        placeholder='R$'
+        type='text'
         id='value'
         value={value}
-        placeholder='R$'
-          onChange={(event) => setValue(event.target.value)}
+        setValue={setValue}
+        className={styles.input}
       />
+
       <label htmlFor='###'>Tipo de valor</label>
       <select className={styles.input} id='###'>
         <option value=''>Selecione uma opção</option>
         <option value='e'>Entrada</option>
       </select>
 
-      <button type='submit'>Inserir valor</button>
+      <button className='button full' type='submit'>Inserir valor</button>
     </form>
   );
 };
