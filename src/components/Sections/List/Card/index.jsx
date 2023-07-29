@@ -1,6 +1,6 @@
 import styles from './style.module.scss';
 
-export const Card = ({ description, value, type }) => {
+export const Card = ({ id, description, value, type, deleteCard }) => {
   const formattedValue = Number(value).toLocaleString(
     'pt-BR', { style: 'currency', currency: 'BRL' }
   );
@@ -10,7 +10,7 @@ export const Card = ({ description, value, type }) => {
       <h3><strong>{description}</strong></h3>
       <p>Tipo de valor aqui {type}</p>
       <span>{formattedValue}</span>
-      <button>Excluir</button>
+      <button onClick={() => deleteCard(id)}>Excluir</button>
     </li>
   );
 };
