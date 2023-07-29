@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid var(--grey-2);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.pinkBold {
+  font-weight: 700;
+  color: var(--color-primary);
+}
