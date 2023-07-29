@@ -37,7 +37,7 @@ export const HomePage = () => {
   return (
     <DefaultTemplate>
       <Form addCard={addCard} />
-      <TotalMoney />
+      <TotalMoney cardList={cardList} />
       <List cardList={cardList} deleteCard={deleteCard} />
       {/* <NoTransactions /> */}
     </DefaultTemplate>
