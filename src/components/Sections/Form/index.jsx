@@ -8,8 +8,8 @@ export const Form = ({ addCard }) => {
 
   const submit = (event) => {
     event.preventDefault();
-    // console.log({ description, value });
-    addCard({ description, value });
+    const newCard = { description, value };
+    addCard(newCard);
     setDescription('');
     setValue(0);
   };
