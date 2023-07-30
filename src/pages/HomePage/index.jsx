@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { DefaultTemplate } from '../../components/Template/DefaultTemplate';
 import { Form } from '../../components/Sections/Form';
 import { NoTransactions } from '../../components/Sections/TotalMoney/NoTransactions';
-import { List } from '../../components/Sections/List';
 import { TotalMoney } from '../../components/Sections/TotalMoney/TotalMoney';
+import { List } from '../../components/Sections/List';
 
 export const HomePage = () => {
   const [cardList, setCardList] = useState([]);  
