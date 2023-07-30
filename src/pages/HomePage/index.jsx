@@ -1,4 +1,5 @@
 import '../../styles/index.scss';
+import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 
 import { DefaultTemplate } from '../../components/Template/DefaultTemplate';
@@ -32,14 +33,19 @@ export const HomePage = () => {
 
   return (
     <DefaultTemplate>
-      <Form addCard={addCard} />
-      {isTotalZero()
+      <div className={styles.leftContainer}>
+        <Form addCard={addCard} />
+        {!isTotalZero() && <TotalMoney cardList={cardList} />}
+      </div>
+
+      <div className={styles.rightContainer}>
+        {isTotalZero() 
         ? <NoTransactions />
-        : <>
-            <TotalMoney cardList={cardList} />
+        : <>            
             <List cardList={cardList} deleteCard={deleteCard} />
           </>
-      }
+        }
+      </div>
     </DefaultTemplate>
   );
 };

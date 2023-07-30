@@ -5,7 +5,7 @@
   padding-top: 20px;
 }
 
-.containerEmpty {
+.empty {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,15 +14,12 @@
   background-color: var(--grey-1);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1050px) {
   .container {
-    width: 100%;
+    padding-top: 0;
   }
 
-  .containerEmpty {
-    justify-content: center;
-    align-items: flex-start;
-    height: auto;
-    width: 100%;
+  .empty {
+    height: 303px;
   }
 }
