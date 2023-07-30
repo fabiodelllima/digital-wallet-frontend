@@ -9,12 +9,7 @@ import { TotalMoney } from '../../components/Sections/TotalMoney/TotalMoney';
 import { List } from '../../components/Sections/List';
 
 export const HomePage = () => {
-  const [cardList, setCardList] = useState([]);  
-
-  useEffect(() => {
-    console.log('LISTA ATUAL:');
-    console.table(cardList);
-  }, [cardList]);
+  const [cardList, setCardList] = useState([]);
 
   const addCard = (newCard) => {    
     newCard = { ...newCard, id: crypto.randomUUID() };    
@@ -49,3 +44,4 @@ export const HomePage = () => {
     </DefaultTemplate>
   );
 };
+  
