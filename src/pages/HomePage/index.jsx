@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { DefaultTemplate } from '../../components/Template/DefaultTemplate';
 import { Form } from '../../components/Sections/Form';
 import { NoTransactions } from '../../components/Sections/TotalMoney/NoTransactions';
-import { List } from '../../components/Sections/List';
 import { TotalMoney } from '../../components/Sections/TotalMoney/TotalMoney';
+import { List } from '../../components/Sections/List';
 
 export const HomePage = () => {
   const [cardList, setCardList] = useState([]);  
@@ -25,12 +25,21 @@ export const HomePage = () => {
     setCardList(newCardList);
   };
 
+  const isTotalZero = () => {
+    const total = cardList.reduce((acc, card) => acc + Number(card.value), 0);
+    return total === 0;
+  };
+
   return (
     <DefaultTemplate>
       <Form addCard={addCard} />
-      <TotalMoney cardList={cardList} />
-      <List cardList={cardList} deleteCard={deleteCard} />
-      {/* <NoTransactions /> */}
+      {isTotalZero()
+        ? <NoTransactions />
+        : <>
+            <TotalMoney cardList={cardList} />
+            <List cardList={cardList} deleteCard={deleteCard} />
+          </>
+      }
     </DefaultTemplate>
   );
 };
