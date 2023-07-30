@@ -25,12 +25,21 @@ export const HomePage = () => {
     setCardList(newCardList);
   };
 
+  const isTotalZero = () => {
+    const total = cardList.reduce((acc, card) => acc + Number(card.value), 0);
+    return total === 0;
+  };
+
   return (
     <DefaultTemplate>
       <Form addCard={addCard} />
-      <TotalMoney cardList={cardList} />
-      <List cardList={cardList} deleteCard={deleteCard} />
-      {/* <NoTransactions /> */}
+
+      {isTotalZero() ? <NoTransactions /> : (
+        <>
+          <TotalMoney cardList={cardList} />
+          <List cardList={cardList} deleteCard={deleteCard} />
+        </>
+      )}
     </DefaultTemplate>
   );
 };
