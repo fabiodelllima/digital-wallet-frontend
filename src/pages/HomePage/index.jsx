@@ -33,13 +33,13 @@ export const HomePage = () => {
   return (
     <DefaultTemplate>
       <Form addCard={addCard} />
-
-      {isTotalZero() ? <NoTransactions /> : (
-        <>
-          <TotalMoney cardList={cardList} />
-          <List cardList={cardList} deleteCard={deleteCard} />
-        </>
-      )}
+      {isTotalZero()
+        ? <NoTransactions />
+        : <>
+            <TotalMoney cardList={cardList} />
+            <List cardList={cardList} deleteCard={deleteCard} />
+          </>
+      }
     </DefaultTemplate>
   );
 };
