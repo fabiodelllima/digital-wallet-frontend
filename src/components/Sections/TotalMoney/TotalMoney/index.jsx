@@ -17,11 +17,11 @@ export const TotalMoney = ({ cardList }) => {
   return(
     <section className={styles.container}>
       <div className={styles.header}>
-        <p className={styles.bold}>Valor total:</p>
+        <p className='title-3'>Valor total:</p>
         <span className={styles.pinkBold}>{formattedTotal}</span>
       </div>
       <div className={styles.bottom}>
-        <p>O valor se refere ao saldo</p>
+        <p className='body'>O valor se refere ao saldo</p>
       </div>
     </section>
   );
