@@ -1,13 +1,12 @@
 @media screen and (min-width: 600px) {
   .leftContainer {
-    max-width: 500px;
-    min-width: 500px;
+    width: clamp(0px, 100%, 355px);
     padding: 0 10px;
   }
 
   .rightContainer {
-    max-width: 500px;
-    min-width: 500px;
+    flex-grow: 1;
+    min-width: clamp(0px, 100%, 500px);
     padding: 0 10px;
   }
 }

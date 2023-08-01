@@ -19,20 +19,40 @@ body {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scrollbar-color: var(--scroll-secondary) var(--scroll-primary);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scroll-primary);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-secondary);
+    border: 3px solid var(--scroll-primary);
+    border-radius: 20px;
+  }
 }
 
-body::-webkit-scrollbar {
-  width: 8px;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--scroll-primary);
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-secondary);
-  border: 3px solid var(--scroll-primary);
-  border-radius: 20px;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  option {
+    font-size: 1rem;
+  }
 }
 
 h1,
