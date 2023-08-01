@@ -6,13 +6,18 @@ export const Card = ({ id, description, value, type, deleteCard }) => {
   );
 
   return (
-    <li className={styles.container}>
+    <li className={styles.container}>      
       <div className={styles.header}>
         <h3 className='title-2'>{description}</h3>
-        <span className='body'>{formattedValue}</span>
+        <p className='body'>
+          {type === 'expense' 
+            ? 'Despesa' 
+            : 'Entrada'
+          }
+        </p>
       </div>
       <div className={styles.bottom}>
-        <p className='body'>Tipo de valor {type}</p>
+        <span className='body'>{formattedValue}</span>        
         <button
           className={styles.button}
           onClick={() => deleteCard(id)}
