@@ -1,4 +1,4 @@
-export const Input = ({ id, label, placeholder, type, value, setValue, className }) => {
+export const Input = ({ id, label, placeholder, type, value, setValue, className, required }) => {
   return(
     <>
       <label htmlFor={id}>{label}</label>
@@ -10,6 +10,7 @@ export const Input = ({ id, label, placeholder, type, value, setValue, className
         value={value}
         onChange={(event) => setValue(event.target.value)}
         className={className}
+        required={required}
       />
     </>
   );

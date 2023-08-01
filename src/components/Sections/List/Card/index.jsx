@@ -7,10 +7,19 @@ export const Card = ({ id, description, value, type, deleteCard }) => {
 
   return (
     <li className={styles.container}>
-      <h3><strong>{description}</strong></h3>
-      <p>Tipo de valor aqui {type}</p>
-      <span>{formattedValue}</span>
-      <button onClick={() => deleteCard(id)}>Excluir</button>
+      <div className={styles.header}>
+        <h3 className='title-2'>{description}</h3>
+        <span className='body'>{formattedValue}</span>
+      </div>
+      <div className={styles.bottom}>
+        <p className='body'>Tipo de valor {type}</p>
+        <button
+          className={styles.button}
+          onClick={() => deleteCard(id)}
+        >
+          Excluir
+        </button>
+      </div>
     </li>
   );
 };

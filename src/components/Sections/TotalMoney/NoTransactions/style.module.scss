@@ -1,25 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding-top: 20px;
-}
+  width: 100%;
 
-.empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  height: 150px;
-  background-color: var(--grey-1);
+  .empty {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
 }
 
 @media screen and (min-width: 1050px) {
   .container {
     padding-top: 0;
-  }
-
-  .empty {
-    height: 303px;
   }
 }

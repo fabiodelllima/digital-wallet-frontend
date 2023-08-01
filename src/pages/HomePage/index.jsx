@@ -1,6 +1,6 @@
 import '../../styles/index.scss';
 import styles from './style.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { DefaultTemplate } from '../../components/Template/DefaultTemplate';
 import { Form } from '../../components/Sections/Form';
@@ -11,8 +11,8 @@ import { List } from '../../components/Sections/List';
 export const HomePage = () => {
   const [cardList, setCardList] = useState([]);
 
-  const addCard = (newCard) => {    
-    newCard = { ...newCard, id: crypto.randomUUID() };    
+  const addCard = (newCard) => {
+    newCard = { ...newCard, id: crypto.randomUUID() };
     setCardList([...cardList, newCard]);
   };
 
