@@ -30,11 +30,11 @@ export const HomePage = () => {
     <DefaultTemplate>
       <div className={styles.leftContainer}>
         <Form addCard={addCard} />
-        {!hasNoTransactions() && <TotalMoney cardList={cardList} />}
+        { !hasNoTransactions() && <TotalMoney cardList={cardList} /> }
       </div>
 
       <div className={styles.rightContainer}>
-        {hasNoTransactions() 
+        { hasNoTransactions() 
           ? <NoTransactions />
           : <>
               <List cardList={cardList} deleteCard={deleteCard} />

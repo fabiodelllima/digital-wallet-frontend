@@ -10,7 +10,7 @@ export const Card = ({ id, description, value, type, deleteCard }) => {
       <div className={styles.header}>
         <h3 className='title-2'>{description}</h3>
         <p className='body'>
-          {type === 'expense' 
+          { type === 'expense' 
             ? 'Despesa' 
             : 'Entrada'
           }
