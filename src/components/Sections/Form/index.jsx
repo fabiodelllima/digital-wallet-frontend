@@ -10,10 +10,16 @@ export const Form = ({ addCard }) => {
 
   const submit = (event) => {
     event.preventDefault();
-    const newCard = { description, value };
+    const newCard = { description, value, type };
+    
+    { type === 'income' 
+      ? setType('income') 
+      : setType('expense');
+    }
+
     addCard(newCard);
     setDescription('');
-    setValue('');
+    setValue('');    
   };
 
   return (
@@ -26,7 +32,7 @@ export const Form = ({ addCard }) => {
         value={description}
         setValue={setDescription}
         className={styles.input}
-        required={false}
+        required={true}
       />
       <span className={styles.helper}>
         Ex: Compra de roupas
@@ -39,7 +45,7 @@ export const Form = ({ addCard }) => {
         value={value}
         setValue={setValue}
         className={styles.input}
-        required={true}
+        required={true}        
       />
       <Select 
         name='type'
@@ -52,7 +58,7 @@ export const Form = ({ addCard }) => {
         }
         required={true}
       />
-      <button 
+      <button
         className='button full' 
         type='submit'
       >

@@ -20,6 +20,15 @@
     flex-direction: column;
     gap: 20px;
   }
+
+  @media (min-width: 1040px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .bottom {
+      align-items: flex-end;
+    }
+  }
 }
 
 .button {
@@ -36,15 +45,5 @@
     opacity: 1;
     background-color: var(--grey-4);
     color: var(--white);
-  }
-}
-
-@media screen and (min-width: 1040px) {
-
-  .header,
-  .bottom {
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
   }
 }
