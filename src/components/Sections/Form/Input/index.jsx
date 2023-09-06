@@ -1,8 +1,17 @@
-export const Input = ({ id, label, placeholder, type, value, setValue, className, required }) => {
-  return(
+export const Input = ({
+  id,
+  label,
+  placeholder,
+  type,
+  value,
+  setValue,
+  className,
+  required,
+}) => {
+  return (
     <>
       <label htmlFor={id}>{label}</label>
-      <input          
+      <input
         placeholder={placeholder}
         type={type}
         name={id}
