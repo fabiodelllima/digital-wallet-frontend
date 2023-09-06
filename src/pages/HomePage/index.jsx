@@ -35,7 +35,7 @@ export const HomePage = () => {
     <DefaultTemplate>
       <div className={styles.leftContainer}>
         <Form addCard={addCard} />
-        {hasNoTransactions() ? null : (
+        {!hasNoTransactions() && (
           <TotalMoney cardList={cardList} />
         )}
       </div>
