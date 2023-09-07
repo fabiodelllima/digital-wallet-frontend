@@ -17,12 +17,17 @@ export const HomePage = () => {
   };
 
   const deleteCard = (deleteId) => {
-    const newCardList = cardList.filter((card) => card.id !== deleteId);
+    const newCardList = cardList.filter(
+      (card) => card.id !== deleteId
+    );
     setCardList(newCardList);
   };
 
   const hasNoTransactions = () => {
-    const total = cardList.reduce((acc, card) => acc + Number(card.value), 0);
+    const total = cardList.reduce(
+      (acc, card) => acc + Number(card.value),
+      0
+    );
     return total === 0;
   };
 
@@ -30,18 +35,20 @@ export const HomePage = () => {
     <DefaultTemplate>
       <div className={styles.leftContainer}>
         <Form addCard={addCard} />
-        {!hasNoTransactions() && <TotalMoney cardList={cardList} />}
+        {!hasNoTransactions() && (
+          <TotalMoney cardList={cardList} />
+        )}
       </div>
 
       <div className={styles.rightContainer}>
-        {hasNoTransactions() 
-          ? <NoTransactions />
-          : <>
-              <List cardList={cardList} deleteCard={deleteCard} />
-            </>
-        }
+        {hasNoTransactions() ? (
+          <NoTransactions />
+        ) : (
+          <>
+            <List cardList={cardList} deleteCard={deleteCard} />
+          </>
+        )}
       </div>
     </DefaultTemplate>
   );
 };
-  

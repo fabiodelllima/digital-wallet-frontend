@@ -11,15 +11,14 @@ export const Form = ({ addCard }) => {
   const submit = (event) => {
     event.preventDefault();
     const newCard = { description, value, type };
-    
-    { type === 'income' 
-      ? setType('income') 
-      : setType('expense');
+
+    {
+      type === 'income' ? setType('income') : setType('expense');
     }
 
     addCard(newCard);
     setDescription('');
-    setValue('');    
+    setValue('');
   };
 
   return (
@@ -34,34 +33,28 @@ export const Form = ({ addCard }) => {
         className={styles.input}
         required={true}
       />
-      <span className={styles.helper}>
-        Ex: Compra de roupas
-      </span>
+      <span className={styles.helper}>Ex: Compra de roupas</span>
       <Input
-        label='Valor (R$)' 
+        label='Valor (R$)'
         placeholder='1'
         type='number'
         id='value'
         value={value}
         setValue={setValue}
         className={styles.input}
-        required={true}        
+        required={true}
       />
-      <Select 
+      <Select
         name='type'
         id='type'
         value={type}
         setType={setType}
         className={`
           ${styles.input} 
-          ${styles.select}`
-        }
+          ${styles.select}`}
         required={true}
       />
-      <button
-        className='button full' 
-        type='submit'
-      >
+      <button className='button full' type='submit'>
         Inserir valor
       </button>
     </form>

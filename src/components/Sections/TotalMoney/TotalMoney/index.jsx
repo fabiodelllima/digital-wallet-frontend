@@ -7,17 +7,18 @@ export const TotalMoney = ({ cardList }) => {
     }
 
     const total = cardList.reduce((acc, card) => {
-      return card.type === 'income' 
-      ? acc + Number(card.value) 
-      : acc - Number(card.value);
+      return card.type === 'income'
+        ? acc + Number(card.value)
+        : acc - Number(card.value);
     }, Number(0));
 
     return total;
   };
 
-  const formattedTotal = calc().toLocaleString(
-    'pt-BR', { style: 'currency', currency: 'BRL' }
-  );
+  const formattedTotal = calc().toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  });
 
   return (
     <section className={styles.container}>
