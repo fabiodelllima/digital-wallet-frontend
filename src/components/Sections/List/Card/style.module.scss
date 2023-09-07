@@ -47,3 +47,11 @@
     color: var(--white);
   }
 }
+
+.income {
+  border-left: 4px solid var(--color-secondary);
+}
+
+.expense {
+  border-left: 4px solid var(--grey-2);
+}

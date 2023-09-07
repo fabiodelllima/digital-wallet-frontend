@@ -9,7 +9,7 @@ export const List = ({ cardList, deleteCard }) => {
         {cardList.map((card) => (
           <Card
             key={card.id}
-            id={card.id} 
+            id={card.id}
             description={card.description}
             type={card.type}
             value={card.value}
