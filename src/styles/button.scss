@@ -5,12 +5,13 @@
   color: var(--white);
   height: 3rem;
   cursor: pointer;
+  transition: 0.3s;
 
   &.full {
     width: 100%;
   }
 
   &:hover {
-    filter: brightness(1.2);
+    background-color: var(--color-primary-hover);
   }
 }
