@@ -32,8 +32,8 @@ export const Form = ({ addCard }) => {
         setValue={setDescription}
         className={styles.input}
         required={true}
+        helperMsg='Ex: Compra de roupas'
       />
-      <span className={styles.helper}>Ex: Compra de roupas</span>
       <Input
         label='Valor (R$)'
         placeholder='1'
