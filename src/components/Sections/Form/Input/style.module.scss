@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  .label {
+    padding-left: 4px;
+  }
+
+  .helper {
+    color: var(--grey-3);
+    font-size: 0.75rem;
+    padding-top: 4px;
+    padding-left: 4px;
+  }
+}
