@@ -13,12 +13,12 @@
   }
 
   .input {
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    background-color: var(--grey-1);
-    border-radius: 8px;
     font-family: var(--font-primary);
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--grey-1);
 
     &::placeholder {
       opacity: 0.4;
@@ -30,21 +30,21 @@
       opacity: 1;
     }
   }
-}
 
-.select {
-  font-family: var(--font-primary);
-  margin-bottom: 10px;
-  opacity: 0.4;
-
-  &::placeholder {
-    color: var(--grey-3);
+  .select {
+    font-family: var(--font-primary);
+    margin-bottom: 10px;
     opacity: 0.4;
-  }
 
-  &:active,
-  &:focus {
-    outline-color: var(--black);
-    opacity: 1;
+    &::placeholder {
+      color: var(--grey-3);
+      opacity: 0.4;
+    }
+
+    &:active,
+    &:focus {
+      outline-color: var(--black);
+      opacity: 1;
+    }
   }
 }
