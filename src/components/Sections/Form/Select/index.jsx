@@ -1,7 +1,17 @@
-export const Select = ({ id, type, setType, className, required }) => {  
+import styles from './style.module.scss';
+
+export const Select = ({
+  id,
+  type,
+  setType,
+  className,
+  required,
+}) => {
   return (
-    <>
-      <label htmlFor={id}>Tipo de valor</label>
+    <div className={styles.container}>
+      <label htmlFor={id} className={styles.label}>
+        Tipo de valor
+      </label>
       <select
         name={id}
         id={id}
@@ -14,6 +24,6 @@ export const Select = ({ id, type, setType, className, required }) => {
         <option value='income'>Entrada</option>
         <option value='expense'>Despesa</option>
       </select>
-    </>
+    </div>
   );
 };
